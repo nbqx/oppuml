@@ -1,0 +1,24 @@
+{
+  "name": "oppuml",
+  "description": "simple opml generator",
+  "version": "0.0.1",
+  "author": "nbqx",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nbqx/oppuml.git"
+  },
+  "homepage": "https://github.com/nbqx/oppuml",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "through2": "^0.6.3",
+    "virtual-dom": "0.0.22"
+  },
+  "devDependencies": {
+    "tape": "^3.0.0",
+    "tap-colorize": "^1.2.0"
+  }
+}
