@@ -32,12 +32,9 @@ console.log(oppuml(data));
 
 // stream
 var fs = require('fs'),
-    through = require('through2');
+    JSONStream = require('JSONStream');
 
 fs.createReadStream(__dirname+'/test/sample.json')
-  .pipe(through.obj(function(c,enc,next){
-    this.push(JSON.parse(c));
-    next();
-  }))
+  .pipe(JSONStream.parse())
   .pipe(oppuml.createStream())
   .pipe(process.stdout);
